@@ -15,14 +15,18 @@ export class MenuComponent implements OnInit {
    document.getElementById("btn_open").addEventListener("click", open_menu);
    document.getElementById("btn_close").addEventListener("click", close_menu); 
 
+   var menu_principal = document.getElementById("menu_principal");
    /* Getting the elements by their id. */
    var menu_movil = document.getElementById("menu_movil");
 
    function open_menu(){
      menu_movil.classList.add("menu__responsive_block--show");
+     menu_principal.style.zIndex = "-1";
    }
    function close_menu(){
      menu_movil.classList.remove("menu__responsive_block--show");
+     
+     menu_principal.style.zIndex = "999";
    }
    
  }
@@ -45,6 +49,7 @@ export class MenuComponent implements OnInit {
    document.getElementById("btn_close").addEventListener("click", close_menu); 
    /* Getting the elements by their id. */
    var menu_movil = document.getElementById("menu_movil");
+   var menu_principal = document.getElementById("menu_principal");
 
    // document.getElementById("open_search").addEventListener("click", search);
    document.getElementById("open_nosotros").addEventListener("click", open_nosotros);

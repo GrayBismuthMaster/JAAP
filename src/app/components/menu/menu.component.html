@@ -1,3 +1,4 @@
+<!--
 <div class="header">
     <div class="menu">
         <div class="menu__logo">
@@ -44,6 +45,68 @@
         </div>
     </div>
 </div>
+-->
+<style>
+    .rgba-bg {
+      background-color: rgba(32, 66, 37, 0.2); /* Adjust the alpha value as needed */
+    }
+    .index_menos{
+        z-index: -1;
+    }
+  </style>
+<nav class="navbar navbar-expand-lg fixed-top rgba-bg" color-on-scroll="800" id="menu_principal" >
+    <div class="menu">
+    <div class="container">
+    
+            <div class="menu__logo">
+                <img src="../../../assets/img/LOGO_CESA.png" [routerLink]="['/inicio']" style="cursor: pointer;" alt="Oscar Ayerve">
+            </div>
+            
+            <div class="navbar-collapse" id="navbarToggler">
+                <div class="menu__items">
+                    <div class="menu__items_span " [routerLink]="['/inicio']" style="cursor: pointer;">
+                        Inicio
+                    </div>
+                    <div class="menu__items_span"  style="cursor: pointer;" id="open_nosotros">
+                        <p (click)="menuNosotros()">JAAPs</p>
+                        <ul class="submenu" id="nosotros">
+                            <li><a [routerLink]="['/jaap']" >Información general de la JAAPs</a></li>
+                            <li><a [routerLink]="['/padron']" >Padrón de usuarios</a></li>
+                            <li><a [routerLink]="['/esquema']" >Esquema y/o plano del Sistema</a></li>
+                            <li><a [routerLink]="['/estatuto']" >Estatuto</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu__items_span" style="cursor: pointer;">
+                        <p (click)="menuGestionRiesgos()">Sistema de Gestión de Riesgos</p>
+                        <ul class="submenu" id="gestion_riesgos">
+                            <li><a [routerLink]="['/mapaafeccion']" >Mapa Gestión de Riesgos</a></li>
+                            <li><a [routerLink]="['/mapajaap']" >Mapa de afectación de JAAPS</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu__items_span" style="cursor: pointer;" id="open_sensi">
+                        <p (click)="menuSensibilizacion()">Cursos Sensibilización</p>
+                        <ul class="submenusensibilazacion" id="sensi">
+                            <li><a [routerLink]="['/sensibilizacionuno']" >Sensibilización 1</a></li>
+                            <li><a [routerLink]="['/sensibilizaciondos']" >Sensibilización 2</a></li>
+                            <li><a [routerLink]="['/sensibilizaciontres']" >Sensibilización 3</a></li>
+                            <li><a [routerLink]="['/sensibilizacioncuatro']" >Sensibilización 4</a></li>
+                            <li><a [routerLink]="['/sensibilizacioncinco']" >Sensibilización 5</a></li>
+                            <li><a [routerLink]="['/sensibilizacionseis']" >Sensibilización 6</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__responsie">
+                <svg id="btn_open" (click)="menu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
+                    fill="#fff">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</nav>
+
         <!-- [routerLink]="['/inicio']" (click)="recargar('inicio')" -->
 
 <div class="menu__responsive_block" id="menu_movil">

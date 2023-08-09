@@ -24,6 +24,7 @@ import { SensibilizacioncincoComponent } from './components/sensibilizacioncinco
 import { SensibilizacionseisComponent } from './components/sensibilizacionseis/sensibilizacionseis.component';
 import { EstatutoComponent } from './components/estatuto/estatuto.component';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { NgxDocViewerModule } from 'ngx-doc-viewer';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxDocViewerModule
+    NgxDocViewerModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
