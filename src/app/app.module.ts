@@ -25,6 +25,9 @@ import { SensibilizacionseisComponent } from './components/sensibilizacionseis/s
 import { EstatutoComponent } from './components/estatuto/estatuto.component';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AprobadosComponent } from './components/aprobados/aprobados.component';
+import { PresentadoSinAprobacionComponent } from './components/presentado-sin-aprobacion/presentado-sin-aprobacion.component';
+import { PorPresentarJaapComponent } from './components/por-presentar-jaap/por-presentar-jaap.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DocViewerComponent,
     SensibilizacioncincoComponent,
     SensibilizacionseisComponent,
-    EstatutoComponent
+    EstatutoComponent,
+    AprobadosComponent,
+    PresentadoSinAprobacionComponent,
+    PorPresentarJaapComponent
   ],
   imports: [
     BrowserModule,

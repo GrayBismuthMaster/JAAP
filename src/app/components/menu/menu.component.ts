@@ -43,7 +43,10 @@ export class MenuComponent implements OnInit {
    menu_movil.classList.remove("menu__responsive_block--show");
    this._router.navigate(['/' + pagina]);
  }
-
+ toggleSubMenu(elementId: string): void {
+  const submenu = document.getElementById(elementId);
+  submenu?.classList.toggle("submenu--show");
+}
  menu(){
    document.getElementById("btn_open").addEventListener("click", open_menu);
    document.getElementById("btn_close").addEventListener("click", close_menu); 
@@ -74,7 +77,6 @@ export class MenuComponent implements OnInit {
   }
   
  }
-
   menuNosotros(){
     var nostros = document.getElementById("nosotros");
     nostros.classList.toggle("submenu--show");

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { JaapsComponent } from './components/jaaps/jaaps.component';
 import { PadronusuariosComponent } from './components/padronusuarios/padronusuarios.component';
-import { EsquemaComponent } from './components/esquema/esquema.component';
+//import { EsquemaComponent } from './components/esquema/esquema.component';
 import { PlanojuntaComponent } from './components/planojunta/planojunta.component';
 import { ReglamentoComponent } from './components/reglamento/reglamento.component';
 import { MapaafectacionComponent } from './components/mapaafectacion/mapaafectacion.component';
@@ -15,13 +15,18 @@ import { SensibilizacioncuatroComponent } from './components/sensibilizacioncuat
 import { SensibilizacioncincoComponent } from './components/sensibilizacioncinco/sensibilizacioncinco.component';
 import { SensibilizacionseisComponent } from './components/sensibilizacionseis/sensibilizacionseis.component';
 import { EstatutoComponent } from './components/estatuto/estatuto.component';
-
+import { AprobadosComponent } from './components/aprobados/aprobados.component';
+import { PresentadoSinAprobacionComponent } from './components/presentado-sin-aprobacion/presentado-sin-aprobacion.component';
+import { PorPresentarJaapComponent } from './components/por-presentar-jaap/por-presentar-jaap.component';
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  { path: 'presentado-sin-aprobacion', component: PresentadoSinAprobacionComponent },
+  { path: 'por-presentar-jaap', component: PorPresentarJaapComponent },
+  { path: 'aprobados', component: AprobadosComponent },
   { path: 'inicio', component: HomeComponent },
   { path: 'jaap', component: JaapsComponent},
   { path: 'padron', component: PadronusuariosComponent},
-  { path: 'esquema', component: EsquemaComponent},
+ // { path: 'esquema', component: EsquemaComponent},
   { path: 'planojunta', component: PlanojuntaComponent},
   { path: 'reglamento', component: ReglamentoComponent},
   { path: 'mapaafeccion', component: MapaafectacionComponent},
