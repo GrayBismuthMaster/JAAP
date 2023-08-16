@@ -14,7 +14,9 @@ export class SensibilizacioncuatroComponent implements OnInit {
   //doc = 'https://files.fm/down.php?i=sdymh2y6';
 
   // https://github.com/guigrpa/docx-templates#readme
-  doc: string = 'https://files.fm/f/cgttuwhmu';// The URL of the document you want to display
+  doc: string = 'https://files.fm/f/p2n4nrjfv';// The URL of the document you want to display
+  doc2 : string = "https://files.fm/f/rqeq769c7";
+  doc3 : string = "https://files.fm/f/8jjww5ff8";
   viewer: viewerType = 'url'; // The viewerType value you want to use
 
   constructor() { }

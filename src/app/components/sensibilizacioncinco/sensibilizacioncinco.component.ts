@@ -13,6 +13,8 @@ export class SensibilizacioncincoComponent implements OnInit {
 
   // https://github.com/guigrpa/docx-templates#readme
   doc: string = 'https://files.fm/f/xfdthpx8t';// The URL of the document you want to display
+  doc2 : string = "https://files.fm/f/4977rma4t";
+  
   viewer: viewerType = 'url'; // The viewerType value you want to use
 
   constructor() { }

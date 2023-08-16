@@ -28,6 +28,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AprobadosComponent } from './components/aprobados/aprobados.component';
 import { PresentadoSinAprobacionComponent } from './components/presentado-sin-aprobacion/presentado-sin-aprobacion.component';
 import { PorPresentarJaapComponent } from './components/por-presentar-jaap/por-presentar-jaap.component';
+import { SensibilizacionsieteComponent } from './components/sensibilizacionsiete/sensibilizacionsiete.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { PorPresentarJaapComponent } from './components/por-presentar-jaap/por-p
     EstatutoComponent,
     AprobadosComponent,
     PresentadoSinAprobacionComponent,
-    PorPresentarJaapComponent
+    PorPresentarJaapComponent,
+    SensibilizacionsieteComponent
   ],
   imports: [
     BrowserModule,

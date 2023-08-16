@@ -14,6 +14,8 @@ export class SensibilizaciontresComponent implements OnInit {
 
   // https://github.com/guigrpa/docx-templates#readme
   doc: string = 'https://files.fm/f/eayaqbk8h';// The URL of the document you want to display
+  doc2 : string = "https://files.fm/f/jnfw2uv6a";
+  doc3 : string = "https://files.fm/f/x25k5hjdu";
   viewer: viewerType = 'url'; // The viewerType value you want to use
 
 

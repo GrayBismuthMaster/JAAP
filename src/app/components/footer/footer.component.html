@@ -1,18 +1,19 @@
-
 <style>
     .rgba-bg {
-      background-color: rgba(32, 66, 37, 0.562); /* Adjust the alpha value as needed */
+      background-color: rgba(255, 255, 255, 0.562); /* Adjust the alpha value as needed */
+      color : rgba(0, 0, 0, 0.1);
     }
-  </style>
-<footer class="footer">
+</style>
+
+<footer class="footer border">
     <div class="footer__container rgba-bg">
         <div class="row">
-            <div class="col-sm-1"></div>
             <div class="col-sm-2">
                 <div class="footer_vertical">
                     <img class="img_footer" src="../../../assets/img/LOGO_CESA.png" alt="CESA">
-                   </div>
+                </div>
             </div>
+            <div class="col-sm-1"></div>
             <div class="col-sm-3">
                 <div class="footer_vertical">
                     <p [routerLink]="['/Inicio']" >Inicio</p>
@@ -30,7 +31,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="footer_vertical">
-                      <img class="flecha__inicio" src="../../../assets/img/Flecha-subir-inicio.png" (click)="scrollToElement()" alt="Bogati">
+                    <img class="img_footer mr-3" src="assets/img/ppm.svg" alt="PPM">
                 </div>
             </div>
         </div>

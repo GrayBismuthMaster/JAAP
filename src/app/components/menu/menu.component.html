@@ -41,10 +41,10 @@
                         Inicio
                     </div>
                     <div class="menu__items_span" style="cursor: pointer;">
-                        <p (click)="toggleSubMenu('esquema_plano')">Esquema y/o plano del Sistema</p>
+                        <p (click)="toggleSubMenu('esquema_plano')">Información general de la JAAPs</p>
                         <ul class="submenu" id="esquema_plano">
                             <li><a [routerLink]="['/jaap']" >Información general de la JAAPs</a></li>
-                            <li><a [routerLink]="['/estatuto']" >Estatuto</a></li>
+                            <li><a [routerLink]="['/estatuto']" >Estatutos y Reglamentos</a></li>
                             <li class="submenu-child"><a [routerLink]="['/esquema']">Esquema y/o plano del Sistema</a>
                                 <ul class="sub-submenu" id="aprobados">
                                   <li><a [routerLink]="['/aprobados']">Aprobados</a></li> 
@@ -74,6 +74,7 @@
                             <li><a [routerLink]="['/sensibilizacioncuatro']" >Sensibilización 4</a></li>
                             <li><a [routerLink]="['/sensibilizacioncinco']" >Sensibilización 5</a></li>
                             <li><a [routerLink]="['/sensibilizacionseis']" >Sensibilización 6</a></li>
+                            <li><a [routerLink]="['/sensibilizacionsiete']" >Sensibilización 7</a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,5 +134,8 @@
     </div>
     <div class="menu__responsive_block_items" [routerLink]="['/sensibilizacionseis']" (click)="recargar('sensibilizacionseis')">
         <p>Sensibilización 6</p>
+    </div>
+    <div class="menu__responsive_block_items" [routerLink]="['/sensibilizacionseis']" (click)="recargar('sensibilizacionsiete')">
+        <p>Sensibilización 7</p>
     </div>
 </div>
