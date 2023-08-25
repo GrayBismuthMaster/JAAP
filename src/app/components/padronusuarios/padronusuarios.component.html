@@ -1,281 +1,49 @@
+<style>
+    .example-viewport {
+  width: 99vw;
+  height: 100vh;
+  border: 1px solid #ccc;
+  overflow: auto;
+}
+
+.example-item {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+</style>
 <app-menu></app-menu>
 <div class="inicio"> 
+    <cdk-virtual-scroll-viewport [itemSize]="itemHeight" class="example-viewport">
     <div class="contenedor">
         <div class="padron__contenedor">
             <div class="titulo">
                 PADRON DE USUARIOS
             </div>
-            <div class="titulo">
+                <div class="titulo">
                 <div class="padron__contenedor_text">
                     <h4 target="_blank">LISTA DE JUNTAS</h4>
-                    <ngx-doc-viewer [url]="doc" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
                 </div>
-                <h4 target="_blank">BELISARIO QUEVEDO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc2" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-           
-                <h4 target="_blank">BRAZALES</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc3" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">CHISALO DE TOACASO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc4" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">CHITAN ALAQUEZ</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc5" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">CHUGCHILAN GUAMBALO E INCHAPO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc6" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">COMUNA POTRERILLOS</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc7" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">YUGSICHE ALTO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc8" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">CUICUNO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc9" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>    
-                <h4 target="_blank">CUILQUE PROGRESO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc10" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>    
-                <h4 target="_blank">CULCHE MIÑO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc11" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">REGIONAL CHAN</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc12" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>   
-                <h4 target="_blank">EL CALVARIO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc13" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">EL CAMPAMENTO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc14" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>        
-                <h4 target="_blank">EL MILAGRO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc15" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>        
-                <h4 target="_blank">LA LIBERTAD DE GUAYTACAMA</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc16" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>      
-                <h4 target="_blank">LA LIBERTAD SAN JUAN DE PASTOCALLE</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc17" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">LAIGUA SANTO DOMINGO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc18" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">LANGUALO GRANDE</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc19" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">JAAP LLACTAYO SAN ISIDRO, GOTERAS YÁNEZ, SAN VICENTE DE TASHIMA</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc20" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">JAAP LOS LAIPOS</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc21" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">LOS SAUCES NORTE</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc22" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">JAAP MATANGO PUCARA</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc23" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN ANTONIO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc24" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">ONCE DE NOVIEMBRE</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc25" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">ORTUÑO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc26" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">PASTOCALLE CENTRO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc27" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">PATUTAN</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc28" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">PILACOTO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc29" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">PILACUMBI</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc30" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">REGIONAL ORIENTE</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc31" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">REGIONAL RIO BLANCO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc32" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">REGIONAL SAN PEDRO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc33" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN AGUSTIN DE CALLO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc34" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN BUENAVENTURA</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc35" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN FRANCISCO DE QUISHUAR</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc36" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN FRANCISCO DEL CHASQUI</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc37" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN FRANCISCO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc38" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN JOSE DE POALÓ</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc39" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN JUAN DE ROMERILLOS</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc40" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                <h4 target="_blank">SAN JUAN DE SARAPAMBA</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc41" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">SAN LUIS DE YACUPUNGO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc42" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">SAN MIGUEL CUCHUCO ALTO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc43" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP SAN PEDRO DE TENERIA LAS PLAYAS Y PASTO ALTO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc44" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP SAN VICENTE DE LUTO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc45" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP SANTA ROSA DE PICHUL</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc46" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP SANTO SAMANA</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc47" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP SEIS BARRIOS FACE</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc48" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP TAÑALO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc49" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP TOACASO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc50" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP UNABANA PALOPO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc51" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP WINTZA</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc52" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
-                    <h4 target="_blank">JAAP ZUMBALICA CENTRO</h4>
-                    <br>
-                    <h5 target="_blank">LISTA</h5>
-                        <ngx-doc-viewer [url]="doc53" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
-                    <br>
+                
+                    <div *cdkVirtualFor="let item of items; let i = index" class="example-item">
+                        <h4 target="_blank">{{item.nombre}}</h4>
+                        <br>
+                        <h5 target="_blank">LISTA</h5>
+                            <ngx-doc-viewer [url]="item.url" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
+                        <br>
+
+                    </div>
                     
+                    
+                </div>
+                
             </div>
             
         </div>
-        
-    </div>
+    </cdk-virtual-scroll-viewport>
 </div>
 <app-footer></app-footer>

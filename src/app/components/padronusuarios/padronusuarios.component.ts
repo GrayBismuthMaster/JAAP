@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { viewerType } from 'ngx-doc-viewer';
 
+import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+
 @Component({
   selector: 'app-padronusuarios',
   templateUrl: './padronusuarios.component.html',
@@ -62,14 +64,78 @@ export class PadronusuariosComponent implements OnInit {
   doc51 : string = 'https://files.fm/f/dm64nkh7q'; // UNABANA PALOPO
   doc52 : string = 'https://files.fm/f/hvjzus69c'; // WINTZA
   doc53 : string = 'https://files.fm/f/znzy7xpqc'; // ZUMBALICA
-
+  itemHeight= 50;
+    // Populate your items array with document URLs
+    
+    items = [
+      { nombre: "BELISARIO QUEVEDO", url: this.doc },
+      { nombre: "BRAZALES", url: this.doc2 },
+      { nombre: "CHISALO DE TOACASO", url: this.doc3 },
+      { nombre: "CHITAN ALAQUEZ", url: this.doc4 },
+      { nombre: "CHUGCHILAN GUAMBALO E INCHAPO", url: this.doc5 },
+      { nombre: "COMUNA POTRERILLOS", url: this.doc6 },
+      { nombre: "YUGSICHE ALTO", url: this.doc7 },
+      { nombre: "CUICUNO", url: this.doc8 },
+      { nombre: "CUILQUE PROGRESO", url: this.doc9 },
+      { nombre: "CULCHE MIÑO", url: this.doc10 },
+      { nombre: "REGIONAL CHAN", url: this.doc11 },
+      { nombre: "EL CALVARIO", url: this.doc12 },
+      { nombre: "EL CAMPAMENTO", url: this.doc13 },
+      { nombre: "EL MILAGRO", url: this.doc14 },
+      { nombre: "LA LIBERTAD DE GUAYTACAMA", url: this.doc15 },
+      { nombre: "LA LIBERTAD SAN JUAN DE PASTOCALLE", url: this.doc16 },
+      { nombre: "LAIGUA SANTO DOMINGO", url: this.doc17 },
+      { nombre: "LANGUALO GRANDE", url: this.doc18 },
+      { nombre: "JAAP LLACTAYO SAN ISIDRO, GOTERAS YÁNEZ, SAN VICENTE DE TASHIMA", url: this.doc19 },
+      { nombre: "JAAP LOS LAIPOS", url: this.doc20 },
+      { nombre: "LOS SAUCES NORTE", url: this.doc21 },
+      { nombre: "JAAP MATANGO PUCARA", url: this.doc22 },
+      { nombre: "SAN ANTONIO", url: this.doc23 },
+      { nombre: "ONCE DE NOVIEMBRE", url: this.doc24 },
+      { nombre: "ORTUÑO", url: this.doc25 },
+      { nombre: "PASTOCALLE CENTRO", url: this.doc26 },
+      { nombre: "PATUTAN", url: this.doc27 },
+      { nombre: "PILACOTO", url: this.doc28 },
+      { nombre: "PILACUMBI", url: this.doc29 },
+      { nombre: "REGIONAL ORIENTE", url: this.doc30 },
+      { nombre: "REGIONAL RIO BLANCO", url: this.doc31 },
+      { nombre: "REGIONAL SAN PEDRO", url: this.doc32 },
+      { nombre: "SAN AGUSTIN DE CALLO", url: this.doc33 },
+      { nombre: "SAN BUENAVENTURA", url: this.doc34 },
+      { nombre: "SAN FRANCISCO DE QUISHUAR", url: this.doc35 },
+      { nombre: "SAN FRANCISCO DEL CHASQUI", url: this.doc36 },
+      { nombre: "SAN FRANCISCO", url: this.doc37 },
+      { nombre: "SAN JOSE DE POALÓ", url: this.doc38 },
+      { nombre: "SAN JUAN DE ROMERILLOS", url: this.doc39 },
+      { nombre: "SAN JUAN DE SARAPAMBA", url: this.doc40 },
+      { nombre: "SAN LUIS DE YACUPUNGO", url: this.doc41 },
+      { nombre: "SAN MIGUEL CUCHUCO ALTO", url: this.doc42 },
+      { nombre: "JAAP SAN PEDRO DE TENERIA LAS PLAYAS Y PASTO ALTO", url: this.doc43 },
+      { nombre: "JAAP SAN VICENTE DE LUTO", url: this.doc44 },
+      { nombre: "JAAP SANTA ROSA DE PICHUL", url: this.doc45 },
+      { nombre: "JAAP SANTO SAMANA", url: this.doc46 },
+      { nombre: "JAAP SEIS BARRIOS FACE", url: this.doc47 },
+      { nombre: "JAAP TAÑALO", url: this.doc48 },
+      { nombre: "JAAP TOACASO", url: this.doc49 },
+      { nombre: "JAAP UNABANA PALOPO", url: this.doc50 },
+      { nombre: "JAAP WINTZA", url: this.doc51 },
+      { nombre: "JAAP ZUMBALICA CENTRO", url: this.doc52 },
+      { nombre: "this.doc53", url: this.doc53 }
+    ];
+    
+    
   constructor() { }
+  //items = Array.from({ length: 10000 }).map((_, i) => `Item #${i}`);
+  //itemHeight = 100;
 
   ngOnInit(): void {
+    console.log(this.items);
     window.scroll({ 
       top: 0, 
       left: 0, 
       behavior: 'smooth' });
   }
-
+  trackByFn(index: number, item: any): number {
+    return index;
+  }
 }

@@ -29,6 +29,8 @@ import { AprobadosComponent } from './components/aprobados/aprobados.component';
 import { PresentadoSinAprobacionComponent } from './components/presentado-sin-aprobacion/presentado-sin-aprobacion.component';
 import { PorPresentarJaapComponent } from './components/por-presentar-jaap/por-presentar-jaap.component';
 import { SensibilizacionsieteComponent } from './components/sensibilizacionsiete/sensibilizacionsiete.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { SensibilizacionsieteComponent } from './components/sensibilizacionsiete
     BrowserModule,
     AppRoutingModule,
     NgxDocViewerModule,
-    NgbModule
+    NgbModule,
+    InfiniteScrollModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

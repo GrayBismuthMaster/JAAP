@@ -22,12 +22,13 @@
       "es2020",
       "dom"
     ],
-    "skipLibCheck": true
+    "skipLibCheck": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    //"enableIvy": false
   }
 }
