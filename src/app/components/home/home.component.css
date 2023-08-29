@@ -1,0 +1,28 @@
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.box {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px;
+    /*max-width: calc(50.33% - 20px); /* Adjust this percentage for different numbers of boxes */
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.8);
+}

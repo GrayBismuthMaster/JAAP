@@ -19,6 +19,9 @@ import { AprobadosComponent } from './components/aprobados/aprobados.component';
 import { PresentadoSinAprobacionComponent } from './components/presentado-sin-aprobacion/presentado-sin-aprobacion.component';
 import { PorPresentarJaapComponent } from './components/por-presentar-jaap/por-presentar-jaap.component';
 import { SensibilizacionsieteComponent } from './components/sensibilizacionsiete/sensibilizacionsiete.component';
+import { EsquemaComponent } from './components/esquema/esquema.component';
+import { PlanContingenciaComponent } from './components/plan-contingencia/plan-contingencia.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
   { path: 'presentado-sin-aprobacion', component: PresentadoSinAprobacionComponent },
@@ -27,9 +30,10 @@ const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
   { path: 'jaap', component: JaapsComponent},
   { path: 'padron', component: PadronusuariosComponent},
- // { path: 'esquema', component: EsquemaComponent},
+  { path: 'esquema', component: EsquemaComponent},
   { path: 'planojunta', component: PlanojuntaComponent},
   { path: 'reglamento', component: ReglamentoComponent},
+  { path: 'plancontingencia', component: PlanContingenciaComponent},
   { path: 'mapaafeccion', component: MapaafectacionComponent},
   { path: 'mapajaap', component: MapaJaapComponent},
   { path: 'sensibilizacionuno', component: SensibilizacionunoComponent},

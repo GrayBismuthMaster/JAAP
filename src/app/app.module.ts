@@ -31,6 +31,8 @@ import { PorPresentarJaapComponent } from './components/por-presentar-jaap/por-p
 import { SensibilizacionsieteComponent } from './components/sensibilizacionsiete/sensibilizacionsiete.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { PlanContingenciaComponent } from './components/plan-contingencia/plan-contingencia.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     AprobadosComponent,
     PresentadoSinAprobacionComponent,
     PorPresentarJaapComponent,
-    SensibilizacionsieteComponent
+    SensibilizacionsieteComponent,
+    CarouselComponent,
+    PlanContingenciaComponent
   ],
   imports: [
     BrowserModule,

@@ -41,17 +41,20 @@
                         Inicio
                     </div>
                     <div class="menu__items_span" style="cursor: pointer;">
-                        <p (click)="toggleSubMenu('esquema_plano')">Información general de la JAAPs</p>
+                        <p (click)="toggleSubMenu('esquema_plano')">JAAPs</p>
                         <ul class="submenu" id="esquema_plano">
-                            <li><a [routerLink]="['/jaap']" >Información general de la JAAPs</a></li>
+                            <li><a [routerLink]="['/jaap']" >Información General</a></li>
                             <li><a [routerLink]="['/estatuto']" >Estatutos y Reglamentos</a></li>
-                            <li class="submenu-child"><a [routerLink]="['/esquema']">Esquema y/o plano del Sistema</a>
+                            <li class="submenu-child"><a [routerLink]="['/esquema']">Planos del Sistema</a>
+                                <!--
                                 <ul class="sub-submenu" id="aprobados">
                                   <li><a [routerLink]="['/aprobados']">Aprobados</a></li> 
                                   <li><a [routerLink]="['/presentado-sin-aprobacion']">Presentados Sin Aprobación</a></li> 
                                   <li><a [routerLink]="['/por-presentar-jaap']">Por presentar por parte de la JAAP</a></li> 
                                 
                                 </ul>
+                                
+                                -->
                             </li>
                             <li><a [routerLink]="['/padron']" >Padrón de Usuarios</a></li>
                             
@@ -63,6 +66,7 @@
                         <ul class="submenu" id="gestion_riesgos">
                             <li><a [routerLink]="['/mapaafeccion']" >Mapa Gestión de Riesgos</a></li>
                             <li><a [routerLink]="['/mapajaap']" >Mapa de afectación de JAAPS</a></li>
+                            <li><a [routerLink]="['/plancontingencia']" >Plan de Contingencia</a></li>
                         </ul>
                     </div>
                     <div class="menu__items_span" style="cursor: pointer;" id="open_sensi">
