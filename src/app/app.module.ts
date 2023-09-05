@@ -33,6 +33,10 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { PlanContingenciaComponent } from './components/plan-contingencia/plan-contingencia.component';
+import { TourMatMenuModule } from 'ngx-ui-tour-md-menu';
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from "@angular/material/list";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -70,7 +74,11 @@ import { PlanContingenciaComponent } from './components/plan-contingencia/plan-c
     NgxDocViewerModule,
     NgbModule,
     InfiniteScrollModule,
-    ScrollingModule
+    ScrollingModule,
+    TourMatMenuModule.forRoot(),
+    MatSidenavModule,
+    MatListModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

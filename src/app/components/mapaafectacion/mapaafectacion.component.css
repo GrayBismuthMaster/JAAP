@@ -1,0 +1,5 @@
+.tooltip-transition {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: top 0.3s ease, left 0.3s ease; /* Add the transition properties */
+}
