@@ -17,25 +17,33 @@ export class MapaafectacionComponent implements OnInit {
 
     this.tourService.initialize([
       {
-        anchorId: "me_redirijo",
+        anchorId: "titulo",
         content:
-          "This is a step from the eager loaded app module in the home component",
-        title: "Home Component",
-        route: "mapaafeccion#me_redirijo"
+          "Bienvenido a la gestión de riesgos, para continuar de click en next o en siguiente",
+        title: "Bienvenido",
+        route: "mapaafeccion#titulo"
       },
       {
-        anchorId: 'titulos', // Unique anchor ID for this tooltip
-        content: 'This is a tooltip for #titulos', // Tooltip content
-        title: 'Tooltip Title',
+        anchorId: 'sidebar_mapa', // Unique anchor ID for this tooltip
+        content: 'Para continuar despliegue las opciones del mapa', // Tooltip content
+        title: 'Despliegue de mapa',
         route: 'mapaafeccion#titulos', // Route where this tooltip should be displayed
        },
       {
-        anchorId: "app-mapaafectacion",
+        anchorId: "sidebar_sitios_seguros",
         content:
-          "ThiSecond step",
-        title: "Homsd",
-        route: "mapaafeccion#app-mapaafectacion"
+          "Dé click en la casilla para desplegar los sitios seguros",
+        title: "Sitios Seguros",
+        route: "mapaafeccion#sidebar_sitios_seguros"
       },
+      {
+        anchorId: "sidebar_display_sitios_seguros",
+        content:
+          "Aquí puede visualizar los sitios seguros del mapa, da click en algún marcador",
+        title: "Sitios Seguros",
+        route: "mapaafeccion#sidebar_display_sitios_seguros"
+      },
+
     ]);
 
     this.tourService.start();
@@ -48,7 +56,6 @@ export class MapaafectacionComponent implements OnInit {
     */
   }
 
-
   private createMutationObserver() {
     this.mutationObserver = new MutationObserver((mutations) => {
       mutations.forEach((mutation: any) => {
@@ -56,17 +63,20 @@ export class MapaafectacionComponent implements OnInit {
           // This element has been added to the DOM
           this.modifyElementAttributes(mutation.target);
         }
-
+          //CONTENEDOR BACKGROUND
+          let contenedorBackground:any = document.querySelector("#contenedor_background")
+          contenedorBackground.style.backgroundColor='rgba(0, 0, 0, 0.7)';
         //anchorIds.forEach((anchorId) => {
           let tooltip:any = document.querySelector("#mat-menu-panel-0")
-          tooltip.style.position = 'absolute';
-          tooltip.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-          tooltip.style.transition = 'transition: top 0.3s ease, left 0.3s ease;' /* Add the transition properties */
-         
+
           if(this.tourService.currentStep && tooltip){
+            tooltip.style.position = 'absolute';
+            tooltip.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            tooltip.style.transition = 'transition: top 0.3s ease, left 0.3s ease;' /* Add the transition properties */
+            tooltip.style.zIndex = '1';
             const divObjective: HTMLElement | null = document.querySelector(`#${this.tourService.currentStep.anchorId}`);
-            console.log("divobjective"+divObjective.textContent)
             console.log("step"+this.tourService.currentStep.anchorId);
+            console.log("Divobjective", divObjective.title)
             if (divObjective && tooltip) {
               // Get the position of the div
               const divRect = divObjective.getBoundingClientRect();
@@ -75,13 +85,23 @@ export class MapaafectacionComponent implements OnInit {
               const tooltipTop = divRect.bottom + window.scrollY; // Position it below the div
               const tooltipLeft = divRect.left + window.scrollX; // Position it at the left edge of the div
 
+              divObjective.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+
               // Set the tooltip's position
               // Set the tooltip's position with a slight delay to trigger the transition
-              setTimeout(() => {
+
+              //setTimeout(() => {
                 tooltip.style.top = `${tooltipTop}px`;
                 tooltip.style.left = `${tooltipLeft}px`;
-              }, 100);
+              //}, 10);
+
             }
+          }else{
+            console.log("GInal")
+            let mapContainer:any = document.querySelector(".mapa__contenedor")
+            mapContainer.style.zIndex = "1";
+            console.log(mapContainer)
+            contenedorBackground.style.backgroundColor='transparent';
           }
 
 

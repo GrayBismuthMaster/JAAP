@@ -3,7 +3,7 @@
   width: 99vw;
   height: 100vh;
   border: 1px solid #ccc;
-  overflow: auto;
+
 }
 
 .example-item {
@@ -11,38 +11,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px;
+  margin: 30vh;
   border-bottom: 1px solid #ccc;
 }
 
 </style>
 <app-menu></app-menu>
-<div class="inicio"> 
+<div class="inicio">
+  <div class="contenedor">
     <cdk-virtual-scroll-viewport [itemSize]="itemHeight" class="example-viewport">
-    <div class="contenedor">
-        <div class="padron__contenedor">
-            <div class="titulo">
-                PADRON DE USUARIOS
-            </div>
-                <div class="titulo">
-                <div class="padron__contenedor_text">
-                    <h4 target="_blank">LISTA DE JUNTAS</h4>
-                </div>
-                
-                    <div *cdkVirtualFor="let item of items; let i = index" class="example-item">
-                        <h4 target="_blank">{{item.nombre}}</h4>
+      <!--<div class="titulo">-->
+                    <div *cdkVirtualFor="let item of items; let i = index" class="example-item"  [ngStyle]="{'margin-top': i === 0 ? '10vh' : '30vh'}">
+                         <h4 target="_blank">{{item.nombre}}</h4>
                         <br>
-                            <ngx-doc-viewer [url]="item.url" [viewer]='viewer' style="width:100%;height:80vh;"></ngx-doc-viewer>
+                            <ngx-doc-viewer [url]="item.url" [viewer]='viewer' style="width:100%;height:65vh;"></ngx-doc-viewer>
                         <br>
 
                     </div>
-                    
-                    
-                </div>
-                
+
+
+               <!--</div>-->
+
+            </cdk-virtual-scroll-viewport>
+
             </div>
-            
-        </div>
-    </cdk-virtual-scroll-viewport>
 </div>
 <app-footer></app-footer>

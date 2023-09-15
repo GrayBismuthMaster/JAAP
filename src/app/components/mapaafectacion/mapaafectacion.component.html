@@ -1,27 +1,50 @@
 
 <app-menu></app-menu>
-  <div class="inicio">
 
-<h1 id="titulos" class="mat-h1" tourAnchor="titulos" class="mat-h1">
-  tre
-</h1>
-    <div class="contenedor" >
-        <div class="titulo">
-            Mapa de afectación, rutas de evacuación y zona segura del volcan Cotopaxi
-        </div>
-        <div class="mapa__contenedor">
-            <iframe class="mapa" src="https://www.google.com/maps/d/embed?mid=1CsLcqbaNRCPPv62q83CMjB81toksqYo&ehbc=2E312F" width="auto" height="auto"></iframe>
-        </div>
+
+
+<div class="inicio"  style="background-color: transparent;">
+
+  <div id="contenedor_background" class="contenedor" >
+    <div
+      id="titulo" tourAnchor="titulo"
+      style="width: 10px; height: 10px; background-color: transparent; align-self: center; margin-bottom: 13%; position: absolute;"
+    ></div>
+
+    <div  class="titulo" >
+        Mapa de afectación, rutas de evacuación y zona segura del volcan Cotopaxi
     </div>
+
+    <div id="map_container_main" style="display: flex; background-color: transparent; height: 80%; width: 70%; position: relative;">
+
+        <div
+          id="sidebar_mapa"
+          tourAnchor="sidebar_mapa"
+          class="sidebar_map_section"
+        ></div>
+
+        <div
+          id="sidebar_sitios_seguros"
+          tourAnchor="sidebar_sitios_seguros"
+          class="sitios_seguros_section"
+        ></div>
+
+        <div
+          id="sidebar_display_sitios_seguros"
+          tourAnchor="sidebar_display_sitios_seguros"
+          class="sitios_seguros_display_section"
+        ></div>
+
+          <div class="mapa__contenedor">
+            <iframe class="mapa" src="https://www.google.com/maps/d/embed?mid=1CsLcqbaNRCPPv62q83CMjB81toksqYo&ehbc=2E312F" width="auto" height="auto"></iframe>
+          </div>
+    </div>
+
+
+  </div>
 </div>
 
-<h1 id="app-mapaafectacion" tourAnchor="app-mapaafectacion" class="mat-h1" >
-  Home works!
-</h1>
 
-<h1 id="me_redirijo" tourAnchor="me_redirijo" class="mat-h1">
-  Home A works!
-</h1>
 
 <app-footer></app-footer>
 
